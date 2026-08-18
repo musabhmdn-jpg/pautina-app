@@ -47,6 +47,8 @@ export interface Translations {
     formSubmit: string;
     formSuccessTitle: string;
     formSuccessBody: string;
+    formError: string;
+    formSubmitting: string;
     stepsTitle: string;
     stepsSubtitle: string;
     step1Title: string;

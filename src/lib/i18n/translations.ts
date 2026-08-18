@@ -51,6 +51,9 @@ export const translations: Record<Locale, Translations> = {
       formSuccessTitle: "Request received",
       formSuccessBody:
         "Thanks — your verification request has been submitted. We'll email you once your CR and Sijillat records are confirmed.",
+      formError:
+        "Something went wrong submitting your request. Please try again.",
+      formSubmitting: "Submitting…",
       stepsTitle: "Get verified in three steps",
       stepsSubtitle:
         "Every company on Pautina is checked against official commercial registration records before they can trade.",
@@ -183,6 +186,8 @@ export const translations: Record<Locale, Translations> = {
       formSuccessTitle: "تم استلام الطلب",
       formSuccessBody:
         "شكرًا لك — تم إرسال طلب التوثيق. سنراسلك بمجرد تأكيد سجلاتك التجارية.",
+      formError: "حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى.",
+      formSubmitting: "جارٍ الإرسال…",
       stepsTitle: "احصل على التوثيق في ثلاث خطوات",
       stepsSubtitle:
         "يتم التحقق من كل شركة على بوتينا مقابل سجلات السجل التجاري الرسمية قبل أن تتمكن من التداول.",
