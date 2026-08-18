@@ -1,6 +1,7 @@
 export type ProfileRole = "buyer" | "supplier";
 export type VerificationStatus = "unverified" | "pending" | "verified" | "rejected";
 export type CrVerificationStatus = "pending" | "approved" | "rejected";
+export type CrVerificationSource = "landing_form" | "opportunity_modal";
 export type RfqStatus = "draft" | "sent" | "quoted" | "closed";
 
 export interface Database {
@@ -39,11 +40,13 @@ export interface Database {
           id: string;
           profile_id: string | null;
           company_name: string;
-          cr_number: string;
-          sijillat_number: string;
-          sector: string;
+          cr_number: string | null;
+          sijillat_number: string | null;
+          sector: string | null;
           email: string;
-          phone: string;
+          phone: string | null;
+          notes: string | null;
+          source: CrVerificationSource;
           status: CrVerificationStatus;
           reviewer_notes: string | null;
           submitted_at: string;
@@ -52,11 +55,13 @@ export interface Database {
         Insert: {
           profile_id?: string | null;
           company_name: string;
-          cr_number: string;
-          sijillat_number: string;
-          sector: string;
+          cr_number?: string | null;
+          sijillat_number?: string | null;
+          sector?: string | null;
           email: string;
-          phone: string;
+          phone?: string | null;
+          notes?: string | null;
+          source?: CrVerificationSource;
           status?: CrVerificationStatus;
         };
         Update: Partial<Database["public"]["Tables"]["cr_verifications"]["Insert"]>;

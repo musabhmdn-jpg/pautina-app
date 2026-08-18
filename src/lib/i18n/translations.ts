@@ -74,9 +74,12 @@ export const translations: Record<Locale, Translations> = {
       modalBody:
         "Tell us a bit about your company and we'll fast-track your CR and Sijillat verification.",
       modalCompany: "Company name",
+      modalEmail: "Work email",
       modalMessage: "Message (optional)",
       modalMessagePlaceholder: "Anything our verification team should know?",
       modalSubmit: "Submit application",
+      modalSubmitting: "Submitting…",
+      modalError: "Something went wrong submitting your application. Please try again.",
       modalSuccess: "Application submitted. We'll be in touch shortly.",
     },
     buyer: {
@@ -208,9 +211,12 @@ export const translations: Record<Locale, Translations> = {
       modalBody:
         "أخبرنا قليلاً عن شركتك وسنسرّع عملية توثيق سجلك التجاري والسجلات.",
       modalCompany: "اسم الشركة",
+      modalEmail: "البريد الإلكتروني للعمل",
       modalMessage: "رسالة (اختياري)",
       modalMessagePlaceholder: "هل هناك ما يجب أن يعرفه فريق التوثيق؟",
       modalSubmit: "إرسال الطلب",
+      modalSubmitting: "جارٍ الإرسال…",
+      modalError: "حدث خطأ أثناء إرسال طلبك. يرجى المحاولة مرة أخرى.",
       modalSuccess: "تم إرسال الطلب. سنتواصل معك قريبًا.",
     },
     buyer: {

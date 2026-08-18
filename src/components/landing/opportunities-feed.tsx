@@ -88,6 +88,7 @@ export function OpportunitiesFeed() {
               : selectedOpportunity.title
             : undefined
         }
+        opportunitySector={selectedOpportunity?.sector}
       />
     </section>
   );

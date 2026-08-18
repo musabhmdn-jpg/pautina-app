@@ -85,11 +85,14 @@ create table public.cr_verifications (
   id uuid primary key default gen_random_uuid(),
   profile_id uuid references public.profiles (id) on delete set null,
   company_name text not null,
-  cr_number text not null,
-  sijillat_number text not null,
-  sector text not null,
+  cr_number text,
+  sijillat_number text,
+  sector text,
   email text not null,
-  phone text not null,
+  phone text,
+  notes text,
+  source text not null default 'landing_form'
+    check (source in ('landing_form', 'opportunity_modal')),
   status text not null default 'pending'
     check (status in ('pending', 'approved', 'rejected')),
   reviewer_notes text,

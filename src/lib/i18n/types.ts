@@ -63,9 +63,12 @@ export interface Translations {
     modalTitle: string;
     modalBody: string;
     modalCompany: string;
+    modalEmail: string;
     modalMessage: string;
     modalMessagePlaceholder: string;
     modalSubmit: string;
+    modalSubmitting: string;
+    modalError: string;
     modalSuccess: string;
   };
   buyer: {
