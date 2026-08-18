@@ -1,0 +1,67 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --background: #f6f7fb;
+  --surface: #ffffff;
+  --foreground: #10141f;
+  --muted: #667085;
+  --border: #e4e7ec;
+  --brand: #0f6b5c;
+  --brand-strong: #0a4f43;
+  --brand-soft: #e6f3ef;
+  --accent: #c8862a;
+}
+
+.dark {
+  --background: #0b0f19;
+  --surface: #121826;
+  --foreground: #edf0f7;
+  --muted: #9aa4b8;
+  --border: #232b3d;
+  --brand: #2fbfa0;
+  --brand-strong: #6fe0c7;
+  --brand-soft: #10352e;
+  --accent: #e8a34d;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-brand: var(--brand);
+  --color-brand-strong: var(--brand-strong);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-arabic: var(--font-arabic);
+}
+
+body {
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+}
+
+html[dir="rtl"] body {
+  font-family: var(--font-arabic), Tahoma, Arial, sans-serif;
+}
+
+* {
+  border-color: var(--color-border);
+}
+
+::selection {
+  background: var(--color-brand-soft);
+  color: var(--color-brand-strong);
+}
+
+@layer components {
+  .form-input {
+    @apply w-full rounded-lg border border-border bg-background px-3 py-2 text-sm text-foreground placeholder:text-muted/70 focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/20;
+  }
+}
